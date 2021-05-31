@@ -689,7 +689,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-syntax-jsx@npm:^7.12.13":
+"@babel/plugin-syntax-jsx@npm:^7.12.13, @babel/plugin-syntax-jsx@npm:^7.2.0":
   version: 7.12.13
   resolution: "@babel/plugin-syntax-jsx@npm:7.12.13"
   dependencies:
@@ -1612,6 +1612,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@craco/craco@npm:^6.1.2":
+  version: 6.1.2
+  resolution: "@craco/craco@npm:6.1.2"
+  dependencies:
+    cross-spawn: ^7.0.0
+    lodash: ^4.17.15
+    semver: ^7.3.2
+    webpack-merge: ^4.2.2
+  peerDependencies:
+    react-scripts: ^4.0.0
+  bin:
+    craco: bin/craco.js
+  checksum: 946d0ea1f83d93c869c3e2d72cc0a3f3f4b099c6d85b03ad62ef7c6d3696505ae53745db84d4caf5c4ebe40e7e81a5009d9662f7aa9fceb832a38a81157e5f33
+  languageName: node
+  linkType: hard
+
 "@csstools/convert-colors@npm:^1.4.0":
   version: 1.4.0
   resolution: "@csstools/convert-colors@npm:1.4.0"
@@ -1626,7 +1642,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/babel-plugin@npm:^11.3.0":
+"@emotion/babel-plugin-jsx-pragmatic@npm:^0.1.5":
+  version: 0.1.5
+  resolution: "@emotion/babel-plugin-jsx-pragmatic@npm:0.1.5"
+  dependencies:
+    "@babel/plugin-syntax-jsx": ^7.2.0
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  checksum: 3957a41cac694c3c57d663f224b3484462002ab9665a5560f263e52b5f77b5b00cddf6588f24bff9efd26084ae6b2bf0a89fcb4ae093c4a1e19c22f46ce24a15
+  languageName: node
+  linkType: hard
+
+"@emotion/babel-plugin@npm:^11.2.0, @emotion/babel-plugin@npm:^11.3.0":
   version: 11.3.0
   resolution: "@emotion/babel-plugin@npm:11.3.0"
   dependencies:
@@ -1645,6 +1672,20 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0
   checksum: 4c238862d08233b016e00ebc5e4421d085d66736f090e98bcee93cff39dd4a19a39e1f8913600919ccaf0879ad74a7c11098aa9214f667c072bd129b7820d598
+  languageName: node
+  linkType: hard
+
+"@emotion/babel-preset-css-prop@npm:^11.2.0":
+  version: 11.2.0
+  resolution: "@emotion/babel-preset-css-prop@npm:11.2.0"
+  dependencies:
+    "@babel/plugin-transform-react-jsx": ^7.12.1
+    "@babel/runtime": ^7.7.2
+    "@emotion/babel-plugin": ^11.2.0
+    "@emotion/babel-plugin-jsx-pragmatic": ^0.1.5
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  checksum: b4ead1377dee8f31b3bf2aa2466f0c8f68b76a4f180202c1ffb58b6892fe930329f777f489a246f0cadc327cf4c067db8ce0495765a300846805347bdf6cfc83
   languageName: node
   linkType: hard
 
@@ -5391,6 +5432,13 @@ __metadata:
     path-type: ^4.0.0
     yaml: ^1.10.0
   checksum: 151fcb91773c0ae826fc801eab86f8f818605dbf63c8e5515adf0ff0fec5ede8e614f387f93c088d65527a2ea9021f0cd8c6b6e5c7fef2b77480b5e2c33700dc
+  languageName: node
+  linkType: hard
+
+"craco-alias@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "craco-alias@npm:3.0.1"
+  checksum: 59b1ea43be0dc9a33d6274bded203cf7dd04bd17f555d04259fea25145ffa7d0c41703882aa035d9969cfdabb6dba41dafbb6cf6b2587b8dfff1e22f956eee7c
   languageName: node
   linkType: hard
 
@@ -13302,6 +13350,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "react-pokedex@workspace:."
   dependencies:
+    "@craco/craco": ^6.1.2
+    "@emotion/babel-preset-css-prop": ^11.2.0
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
     "@testing-library/jest-dom": ^5.11.4
@@ -13317,6 +13367,7 @@ fsevents@^1.2.7:
     "@typescript-eslint/eslint-plugin": ^4.25.0
     "@typescript-eslint/parser": ^4.25.0
     "@yarnpkg/pnpify": ^3.0.0-rc.3
+    craco-alias: ^3.0.1
     eslint: ^7.27.0
     eslint-config-airbnb: ^18.2.1
     eslint-config-prettier: ^8.3.0
@@ -16317,6 +16368,15 @@ typescript@^4.2.4:
   peerDependencies:
     webpack: 2 || 3 || 4
   checksum: 00f084e2c2883fa68996758446784e366c76fb32a4cffa5131824dc7c2f8ab8b8c24e8cb8c3bd0776f2ef0471fddc9c37ec7712add925341885ee0cdbc48c4b8
+  languageName: node
+  linkType: hard
+
+"webpack-merge@npm:^4.2.2":
+  version: 4.2.2
+  resolution: "webpack-merge@npm:4.2.2"
+  dependencies:
+    lodash: ^4.17.15
+  checksum: 038c6d8ba45f538ce8e4505a8a3d90fbd2e554ba2065bacffe4d7cff0229cce9f0d983bf56061f8e0fef86c711da7232f88681aab285c06673b3916b1040cd9e
   languageName: node
   linkType: hard
 
