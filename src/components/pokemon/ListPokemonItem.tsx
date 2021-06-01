@@ -1,9 +1,18 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
-const PokemonItemBlock = styled.div`
-  color: hotpink;
+const PokemonItemBlock = styled.li`
+  // min-width: 100px;
+  max-width: 100px;
+  margin: 8px auto;
 `;
+
+const PokemonFigure = styled.figure`
+  background: #eee;
+  border-radius: 12px;
+`;
+const PokemonInfo = styled.div``;
 
 export interface ListPokemonItemProps {
   pokemon: any | null;
@@ -17,15 +26,17 @@ const ListPokemonItem: React.FC<ListPokemonItemProps> = ({ pokemon, index }) => 
 
   return (
     <PokemonItemBlock>
-      <figure>
+      <PokemonFigure>
         <img
-          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
-            index + 1
-          }.png`}
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`}
           alt={pokemon.name}
+          css={css`
+            width: 100%;
+            height: auto;
+          `}
         />
-        <figcaption>{pokemon.name}</figcaption>
-      </figure>
+      </PokemonFigure>
+      <PokemonInfo>{pokemon.name}</PokemonInfo>
     </PokemonItemBlock>
   );
 };
